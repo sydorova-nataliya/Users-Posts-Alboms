@@ -1,6 +1,4 @@
-// import { Link } from "react-router-dom";
-
-// import { calculatePopularity, convertDate, generateImageUrl, generateHref } from '../../../../../helpers/utils';
+import { Link } from "react-router-dom";
 
 import './styles.scss'
 
@@ -19,6 +17,8 @@ const User=({ id, name, username, email, address:{street,suite, city, zipcode,ge
         <p className='user__address'>{street}, {suite}, {city}</p>
         <p className='user__address'>{zipcode}</p>
         <p className='user__address'>Geo: {lat}, {lng}</p>
+
+        <Link to={`/posts/:userId=${id}`} className="user__posts">Posts of user</Link>
       </div>
     </>
   );

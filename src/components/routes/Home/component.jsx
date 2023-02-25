@@ -1,11 +1,12 @@
 import Users from './Users';
+import Header from '../../shared/Header';
 
 import './styles.scss';
 
 const Home=()=> (
   <>
+    <Header/>
     <main>
-        <h1 className='title'>List of users:</h1>
         <Users/>
     </main>
   </>
