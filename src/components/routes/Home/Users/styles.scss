@@ -1,0 +1,6 @@
+.users__holder{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+    padding: 0 2vw;
+}

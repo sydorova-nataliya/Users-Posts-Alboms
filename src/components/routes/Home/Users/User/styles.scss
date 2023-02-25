@@ -1,0 +1,57 @@
+.user{
+    &__wrapper{
+        border: 3px solid rgb(156, 60, 188);
+        border-radius: 20px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        text-align: center;
+        position: relative;
+        padding: 1vw;
+    }
+    &__name{
+        margin: 0.5vw;
+        font-size: 2em;
+    }
+    &__username{
+        font-size: 1.7em;
+        margin: 0;
+    }
+    &__id{
+        position: absolute;
+        font-size: 70px;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: #e0cedd
+    }
+    &__company{
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    &__email, &__phone{
+        color: rgb(128, 9, 179);
+        font-size: 1.4em;
+        font-style: italic;
+        text-decoration: none;
+        
+    }
+    &__email:hover, &__phone:hover{
+        text-decoration: underline;
+    }
+    &__website{
+        padding: 2px 10px;
+        background-color: rgb(156, 60, 188);
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
+    &__address{
+        font-size: 1.3em;
+    }
+}
