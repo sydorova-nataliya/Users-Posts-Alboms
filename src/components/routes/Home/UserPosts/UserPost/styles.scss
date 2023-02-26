@@ -1,0 +1,32 @@
+.post{
+    &__wrapper{
+        border: 3px solid rgb(156, 60, 188);
+        border-radius: 20px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        text-align: center;
+        position: relative;
+        padding: 2vw;
+        background-color: white;
+    }
+
+    &__id{
+        position: absolute;
+        font-size: 70px;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: #e0cedd
+    }
+
+    &__title{
+        font-size: 2em;
+        font-weight: normal;
+    }
+    &__body{
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+}

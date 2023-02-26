@@ -1,0 +1,11 @@
+.nav{
+    background-color: black;
+    text-align: center;
+    padding-bottom: 1vw;
+}
+.posts__holder{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3vw;
+    padding: 0 3vw 1vw 3vw;
+}
