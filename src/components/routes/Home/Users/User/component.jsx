@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../../../../shared/Modal/component";
 
 import './styles.scss'
 
 const User=({ id, name, username, email, address:{street,suite, city, zipcode,geo:{lat, lng}},phone,website,company:{name:companyName}})=>{
+
+  const [modatActive, setModalActive] =useState(false);
+  const [albums, setAlbums] =useState([]);
+
 
   return (
     <>
@@ -18,7 +24,27 @@ const User=({ id, name, username, email, address:{street,suite, city, zipcode,ge
         <p className='user__address'>{zipcode}</p>
         <p className='user__address'>Geo: {lat}, {lng}</p>
 
-        <Link to={`/posts/:userId=${id}`} className="user__posts">Posts of user</Link>
+        <Link to={`/posts/:userId=${id}`} className="user__posts">Posts of user</Link><br />
+        <button className="user__open-albums" onClick={()=>{
+            fetch(`https://jsonplaceholder.typicode.com/albums?userId=${id}`)
+                .then(res=>res.json())
+                .then(data=>setAlbums(data))
+            setModalActive(true)
+          }
+          }>Albums</button>
+          {console.log(albums)}
+        <Modal active={modatActive} setActive={setModalActive}>
+            {
+              albums.length===0 ? 'Loading...' :
+              albums.map((album)=> {
+              return (
+                <>
+                  <h5 className="album">{album.id} - {album.title}</h5> 
+                </>
+                
+              )
+              })}
+        </Modal>
       </div>
     </>
   );

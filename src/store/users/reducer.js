@@ -2,7 +2,8 @@ import { SET_USERS , SET_POSTS} from "./types";
 
 const initialState={
     usersList:[],
-    posts:[]
+    posts:[],
+    albums:[]
 };
 
 const users = (state = initialState, action)=>{
