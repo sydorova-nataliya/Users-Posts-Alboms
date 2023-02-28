@@ -22,19 +22,17 @@ const UserPosts=({posts, setPosts})=>{
       <>
         <Header/>
         <main>
-          
           <section className="posts__holder">
           { 
             posts.length===0 ? 'Loading...' :
             posts.map((post)=> 
             <UserPost key={post.id}{...post}/>)
-  
           }
           </section>
         </main>
         <nav className="nav">
             <Link to='/' className="error__btn">Back to Home</Link>
-          </nav>
+        </nav>
       </>
     )
 }
