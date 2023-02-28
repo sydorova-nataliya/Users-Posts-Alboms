@@ -32,18 +32,13 @@ const User=({ id, name, username, email, address:{street,suite, city, zipcode,ge
             setModalActive(true)
           }
           }>Albums</button>
-          {console.log(albums)}
         <Modal active={modatActive} setActive={setModalActive}>
             {
               albums.length===0 ? 'Loading...' :
               albums.map((album)=> {
-              return (
-                <>
-                  <h5 className="album">{album.id} - {album.title}</h5> 
-                </>
-                
-              )
-              })}
+              return <h5 className="album">{album.id} - {album.title}</h5> 
+              })
+            }
         </Modal>
       </div>
     </>

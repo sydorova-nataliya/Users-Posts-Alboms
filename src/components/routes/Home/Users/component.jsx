@@ -22,7 +22,6 @@ const Users=({users,setUsers })=>{
             users.length===0 ? 'Loading...' :
             users.map((user)=> 
             <User key={user.id}{...user}/>)
-  
           }
       </section>
     </div>
